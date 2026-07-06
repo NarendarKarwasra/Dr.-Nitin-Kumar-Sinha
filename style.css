@@ -369,17 +369,17 @@ html {
 
 /* ===== SERVICES SECTION ===== */
 
-.services {
+.home-services {
     padding: 2.5rem 0;
     background: var(--color-white);
 }
 
-.services-header {
+.home-services-header {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.services-eyebrow {
+.home-services-eyebrow {
     display: block;
     font-size: 0.9rem;
     font-weight: 700;
@@ -388,7 +388,7 @@ html {
     margin-bottom: 0.2rem;
 }
 
-.services-title {
+.home-services-title {
     font-family: "Noto Serif Oriya", serif;
     font-weight: 700;
     font-size: 2.4rem;
@@ -398,7 +398,7 @@ html {
     padding-bottom: 0.2rem;
 }
 
-.services-title::after {
+.home-services-title::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -410,13 +410,13 @@ html {
     border-radius: 2px;
 }
 
-.services-grid {
+.home-services-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 1.1rem;
 }
 
-.service-card {
+.home-service-card {
     background: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: 10px;
@@ -425,12 +425,12 @@ html {
     transition: all 0.3s;
 }
 
-.service-card:hover {
+.home-service-card:hover {
     box-shadow: 0 14px 28px rgba(28, 43, 74, 0.1);
     transform: translateY(-4px);
 }
 
-.service-icon {
+.home-service-icon {
     width: 70px;
     height: 70px;
     margin: 0 auto 1.1rem;
@@ -441,12 +441,12 @@ html {
     justify-content: center;
 }
 
-.service-icon i {
+.home-service-icon i {
     font-size: 2rem;
     color: var(--color-primary);
 }
 
-.service-title {
+.home-service-title {
     font-size: 1.04rem;
     font-weight: 700;
     color: var(--color-navy);
@@ -458,7 +458,7 @@ html {
     justify-content: center;
 }
 
-.service-desc {
+.home-service-desc {
     font-size: 0.85rem;
     color: var(--color-text-light);
 }
@@ -478,12 +478,12 @@ html {
 
 
 /* about section */
-.about {
+.home-about {
     background: var(--section-bg);
     padding: 2rem 0;
 }
 
-.about-grid {
+.home-about-grid {
     display: grid;
     grid-template-columns: 400px 1fr 400px;
     gap: 2.5rem;
@@ -491,14 +491,14 @@ html {
 }
 
 /* --- Doctor photo --- */
-.about-photo {
+.home-about-photo {
     width: 100%;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 16px 32px rgba(28, 43, 74, 0.12);
 }
 
-.about-photo img {
+.home-about-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -506,11 +506,11 @@ html {
 }
 
 /* --- About content --- */
-.about-content {
+.home-about-content {
     padding-right: 1rem;
 }
 
-.about-title {
+.home-about-title {
     font-family: "Noto Serif Oriya", serif;
     font-weight: 700;
     font-size: 1.9rem;
@@ -518,7 +518,7 @@ html {
     margin-bottom: 0.8rem;
 }
 
-.about-qualification {
+.home-about-qualification {
     color: var(--color-primary);
     font-weight: 700;
     font-size: 0.98rem;
@@ -526,7 +526,7 @@ html {
     margin-bottom: 1.1rem;
 }
 
-.about-desc {
+.home-about-desc {
     color: var(--color-text);
     font-size: 0.96rem;
     max-width: 520px;
@@ -554,7 +554,7 @@ html {
 }
 
 /* --- Stats column --- */
-.about-stats {
+.home-about-stats {
     border-left: 1px solid var(--color-border);
     padding-left: 2.2rem;
     display: flex;
@@ -990,14 +990,14 @@ html {
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 1200px) {
-    .services-grid {
+    .home-services-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 
 
 
 
-    .about-grid {
+    .home-about-grid {
         grid-template-columns: 300px 1fr 300px;
     }
 }
@@ -1014,11 +1014,11 @@ html {
 
 
 
-    .about-grid {
+    .home-about-grid {
         grid-template-columns: 400px 1fr;
     }
 
-    .about-stats {
+    .home-about-stats {
         grid-column: 1 / -1;
         border-left: none;
         border-top: 1px solid var(--color-border);
@@ -1182,11 +1182,11 @@ html {
 
 
 
-    .services-grid {
+    .home-services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .services-title {
+    .home-services-title {
         font-size: 2rem;
     }
 
@@ -1196,22 +1196,22 @@ html {
 
 
 @media (max-width: 768px) {
-    .about-grid {
+    .home-about-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .about-photo {
+    .home-about-photo {
         max-width: 280px;
         margin: 0 auto;
     }
 
-    .about-desc {
+    .home-about-desc {
         margin-left: auto;
         margin-right: auto;
     }
 
-    .about-content {
+    .home-about-content {
         padding-right: 0;
     }
 
@@ -1339,7 +1339,7 @@ html {
 
 
 
-    .about-title {
+    .home-about-title {
         font-size: 1.55rem;
     }
 
@@ -1347,7 +1347,7 @@ html {
         font-size: 1.7rem;
     }
 
-    .about-stats {
+    .home-about-stats {
         flex-direction: column;
     }
 
@@ -1379,16 +1379,16 @@ html {
 
 
 
-    .services {
+    .home-services {
         padding: 3rem 0;
     }
 
-    .services-grid {
+    .home-services-grid {
         grid-template-columns: 1fr;
         gap: 0.9rem;
     }
 
-    .services-title {
+    .home-services-title {
         font-size: 2rem;
     }
 
