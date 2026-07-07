@@ -8,7 +8,9 @@
     --color-border: #d8d8d8;
     --color-white: #ffffff;
     --section-bg: #f3f8f9;
+    --icon-bg: #e4f2f2;
     --transition: 0.3s ease-in-out;
+    --font-family-display: "Noto Serif Oriya", serif;
 }
 
 * {
@@ -3879,8 +3881,9 @@ select.select-time {
     left: 0;
     bottom: 0;
     width: 50px;
-    height: 3px;
-    background: #29406e;
+    height: 2px;
+    border-radius: 10px;
+    background: #ffffffb2;
 }
 
 .footer-links {
@@ -4022,5 +4025,499 @@ select.select-time {
 @media (max-width: 400px) {
     .footer-brand {
         width: 260px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* about page */
+
+.biography {
+    padding: 2rem 0;
+}
+
+.biography-card {
+    background: var(--color-white);
+    border-radius: 16px;
+    box-shadow: 0 0px 20px rgba(28, 43, 74, 0.2);
+    padding: 2.6rem 2.8rem;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 2.6rem;
+}
+
+/* --- Left: intro / bio icon + paragraphs --- */
+.bio-left {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.bio-icon {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--icon-bg);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-icon i {
+    font-size: 2rem;
+}
+
+.bio-left-content h2 {
+    font-family: var(--font-family-display);
+    font-size: 1.8rem;
+    color: var(--color-navy);
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+}
+
+.bio-left-content p {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.bio-left-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Divider --- */
+.bio-divider {
+    background: var(--color-border);
+    width: 1px;
+}
+
+/* --- Right: detail rows --- */
+.bio-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.bio-row {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+}
+
+.bio-row-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--icon-bg);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-row-icon i {
+    font-size: 1.5rem;
+}
+
+.bio-row-content h4 {
+    font-size: 1.1rem;
+    color: var(--color-navy);
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.bio-row-content p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+
+@media (max-width: 900px) {
+    .biography-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1.8rem;
+    }
+
+    .bio-divider {
+        width: 100%;
+        height: 1px;
+    }
+}
+
+@media (max-width: 560px) {
+    .biography {
+        padding: 2.2rem 0;
+    }
+
+    .biography-card {
+        padding: 1.6rem 1.4rem;
+    }
+
+    .bio-left,
+    .bio-row {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .bio-icon,
+    .bio-row-icon {
+        margin: 0 auto 0.3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+.card-section {
+    padding: 1rem 0;
+}
+
+.card-section-title {
+    font-family: var(--font-family-display);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-navy);
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1.8rem;
+}
+
+.card-section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 46px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 2px;
+}
+
+/* --- Shared card style --- */
+.about-info-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem 1.4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.about-info-card:hover {
+    box-shadow: 0 14px 28px rgba(28, 43, 74, 0.08);
+    transform: translateY(-3px);
+}
+
+.info-card-icon {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--icon-bg);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-card-icon i {
+    font-size: 2rem;
+}
+
+.info-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
+
+.info-card-desc {
+    font-size: 1rem;
+    color: var(--color-text-light);
+}
+
+/* --- Grids --- */
+.qualifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+
+@media (max-width: 992px) {
+
+    .qualifications-grid,
+    .choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .qualifications-grid,
+    .choose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-section {
+        padding: 2rem 0;
+    }
+
+    .card-section-title {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+
+
+
+.philosophy-stats .section-container {
+    padding: 2.6rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+/* ===================================================
+   PANEL 1 — Philosophy of Care
+   =================================================== */
+
+.philosophy-panel {
+    background: #eaf5f6;
+    border-radius: 16px;
+    padding: 2rem 2.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 2.2rem;
+    align-items: center;
+}
+
+.philosophy-left {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.philosophy-icon {
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.philosophy-icon i {
+    font-size: 2rem;
+}
+
+.philosophy-left-text h2 {
+    font-family: var(--font-family-display);
+    font-size: 1.5rem;
+    color: var(--color-navy);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.philosophy-left-text p {
+    font-size: 1rem;
+    color: var(--color-text);
+    max-width: 480px;
+}
+
+.philosophy-divider {
+    background: rgba(28, 43, 74, 0.12);
+    width: 1px;
+    align-self: stretch;
+}
+
+.philosophy-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.philosophy-check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--color-navy);
+    font-weight: 500;
+}
+
+.philosophy-check-item i {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* ===================================================
+   PANEL 2 — Stats strip
+   =================================================== */
+
+.stats-panel {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 2.2rem 2.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.stats-panel .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 0 1.4rem;
+    border-right: 1px solid var(--color-border);
+}
+
+.stats-panel .stat-item:last-child {
+    border-right: none;
+}
+
+.stats-panel .stat-icon {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--icon-bg);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-panel .stat-icon i {
+    font-size: 2rem;
+}
+
+.stat-number {
+    font-family: var(--font-family-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    line-height: 1.1;
+}
+
+.stats-panel .stat-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 0.3rem;
+}
+
+.stat-desc {
+    font-size: 1rem;
+    max-width: 240px;
+    color: var(--color-text-light);
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+
+@media (max-width: 992px) {
+    .philosophy-panel {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .philosophy-divider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .stats-panel {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+    }
+
+    .stats-panel .stat-item {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+        padding: 0 0 1.4rem;
+    }
+
+    .stats-panel .stat-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .philosophy-panel,
+    .stats-panel {
+        padding: 1.6rem 1.4rem;
+    }
+
+    .philosophy-left {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .philosophy-left-text p {
+        max-width: 100%;
+    }
+
+    .stats-panel .stat-item {
+        flex-direction: column;
+        text-align: center;
     }
 }
